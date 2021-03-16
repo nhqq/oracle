@@ -22,9 +22,10 @@ GROUP BY d.department_name;
 ~~~
 
 **分析：**
-查询内容:部门名(department_name),通过聚合函数count统计工作id数作为"部门总人数",avg计算平均工资
-查询表:部门表departments,员工表employees
-查询条件:部门表department_id = 员工表的department_id ,部门表depatment_name在('IT','Sales')中,通过部门表的department_name进行分组
+<p>查询内容:部门名(department_name),通过聚合函数count统计工作id数作为"部门总人数",avg计算平均工资</p>
+<p>查询表:部门表departments,员工表employees</p>
+<p>查询条件:部门表department_id = 员工表的department_id ,部门表depatment_name在('IT','Sales')中,通过部门表的department_name进行分组</p>
+
 ![avatar](./查询1.png)
 
 ### 查询语句二
@@ -41,9 +42,10 @@ HAVING d.department_name in ('IT','Sales');
 ~~~
 
 **分析：**
-查询内容:部门名(department_name),通过聚合函数count统计工作id数作为"部门总人数",avg计算平均工资
-查询表:部门表departments,员工表employees
-查询条件:部门表department_id = 员工表的department_id ,对部门表进行分！组,使用HAVING对分组的结果集进行筛选，部门名必须为'IT'或'Sales'
+<p>查询内容:部门名(department_name),通过聚合函数count统计工作id数作为"部门总人数",avg计算平均工资</p>
+<p>查询表:部门表departments,员工表employees</p>
+<p>查询条件:部门表department_id = 员工表的department_id ,对部门表进行分！组,使用HAVING对分组的结果集进行筛选，部门名必须为'IT'或'Sales'</p>
+
 ![avatar](./查询2.png)
 **sql优化指导结果:There are no recommendations to improve the statement.**
 
@@ -60,7 +62,8 @@ HAVING d.department_name in ('IT','Sales');
 ~~~
 
 **分析：**
-查询内容:部门名(department_name),通过聚合函数count统计"部门总人数",max查找工资,min查找最小工资
-查询表:部门表departments,员工表employees
-查询条件:部门表department_id = 员工表的department_id ,对部门表进行分！组,使用HAVING对分组的结果集进行筛选，部门名必须为'IT'或'Sales'
+<p>查询内容:部门名(department_name),通过聚合函数count统计"部门总人数",max查找工资,min查找最小工资</p>
+<p>查询表:部门表departments,员工表employees</p>
+<p>查询条件:部门表department_id = 员工表的department_id ,对部门表进行分！组,使用HAVING对分组的结果集进行筛选，部门名必须为'IT'或'Sales'</p>
+
 ![avatar](./查询3.png)
