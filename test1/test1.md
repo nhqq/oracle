@@ -47,7 +47,8 @@ HAVING d.department_name in ('IT','Sales');
 <p>查询条件:部门表department_id = 员工表的department_id ,对部门表进行分！组,使用HAVING对分组的结果集进行筛选，部门名必须为'IT'或'Sales'</p>
 
 ![avatar](./查询2.png)
-**sql优化指导结果:There are no recommendations to improve the statement.**
+
+>**sql优化指导结果**:There are no recommendations to improve the statement.
 
 ### 设计Sql语句
 
