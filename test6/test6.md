@@ -123,9 +123,9 @@ size 200M
 autoextend on;
 ```
 
-![](img\image-20210614212949077.png)
+![image-20210614212949077.png](img/image-20210614212949077.png)
 
-![](img\image-20210614213226838.png)
+![image-20210614213226838](img/image-20210614213226838.png)
 
 ## 1.3设计表
 
@@ -141,7 +141,7 @@ address varchar(20) not null);
 
 
 
-![](img\image-20210614225538911.png)
+![image-20210614225538911](img/image-20210614225538911.png)
 
 movie
 
@@ -154,7 +154,7 @@ picture_id number,
 info varchar (255) );
 ~~~
 
-![](img\image-20210614225610463.png)
+![image-20210614225610463](img/image-20210614225610463.png)
 
 hall
 
@@ -167,7 +167,7 @@ capacity number not null
 );
 ~~~
 
-![](img\image-20210614231932321.png)
+![image-20210614231932321](img/image-20210614231932321.png)
 
 order
 
@@ -181,7 +181,7 @@ session_id number,
 user_id number);
 ~~~
 
-![](img\image-20210614232140832.png)
+![image-20210614232140832](img/image-20210614232140832.png)
 
 picture
 
@@ -191,7 +191,7 @@ picture_id number primary key,
 url varchar(20) not null);
 ~~~
 
-![](img\image-20210614232233883.png)
+![image-20210614232233883](img/image-20210614232233883.png)
 
 
 
@@ -207,7 +207,7 @@ hall_id number,
 movie_cinema_id number);
 ~~~
 
-![](img\image-20210614232256552.png)
+![image-20210614232256552](img/image-20210614232256552.png)
 
 user
 
@@ -220,7 +220,7 @@ alter table user1 add gender varchar(20);
 alter table user1 add picture_id number;
 ~~~
 
-![](C:\Users\15615\Desktop\image-20210614232628649.png)
+![image-20210614232628649](img/image-20210614232628649.png)
 
 ```sql
 CREATE TABLE movie_cinema(
@@ -229,7 +229,7 @@ CREATE TABLE movie_cinema(
   4  cinema_id number);
 ```
 
-![](img\image-20210615005418501.png)
+![image-20210615005418501](img/image-20210615005418501.png)
 
 
 
@@ -312,19 +312,19 @@ insert into user1 values(1,'niehan','123','男','3');
 
 
 
-![](img\image-20210615002022892.png)
+![image-20210615002022892](img/image-20210615002022892.png)
 
-![](img\image-20210614235115941.png)
+![image-20210614235115941](img/image-20210614235115941.png)
 
-![](img\image-20210615005121751.png)
+![image-20210615005121751](img/image-20210615005121751.png)
 
-![](img\image-20210615005920656.png)
+![image-20210615005920656](img/image-20210615005920656.png)
 
-![](img\image-20210615010409803.png)
+![image-20210615010409803](img/image-20210615010409803.png)
 
-![](img\image-20210615011034268.png)
+![image-20210615011034268](img/image-20210615011034268.png)
 
-![](img\image-20210615011234486.png)
+![image-20210615011234486](img/image-20210615011234486.png)
 
 
 
@@ -337,7 +337,7 @@ create role role1;
 create role role2;
 ```
 
-![](img\image-20210614214158846.png)
+![image-20210614214158846](img/image-20210614214158846.png)
 
 ## 2.2分配权限
 
@@ -345,7 +345,7 @@ create role role2;
 grant connect,resource,dba,CREATE TABLE,CREATE VIEW to role1;
 ~~~
 
-![](img\image-20210614215318710.png)
+![image-20210614215318710](img/image-20210614215318710.png)
 
 ## 2.3创建用户
 
@@ -361,7 +361,7 @@ DEFAULT TABLESPACE tspace2
 TEMPORARY TABLESPACE temp;
 ~~~
 
-![](img\image-20210614215415310.png)
+![image-20210614215415310](img/image-20210614215415310.png)
 
 ## 2.4分配权限给角色
 
@@ -373,7 +373,7 @@ grant role2 to user2;
 
 
 
-![](img\image-20210614215621209.png)
+![image-20210614215621209](img/image-20210614215621209.png)
 
 ## 2.5切换登录user1
 
@@ -381,7 +381,7 @@ grant role2 to user2;
 conn user1/123;
 ~~~
 
-![](img\image-20210614223955264.png)
+![image-20210614223955264](img/image-20210614223955264.png)
 
 
 
@@ -440,14 +440,14 @@ END MyPack;
 run{
 configure retention policy to redundancy 1;
 configure controlfile autobackup on;
-configure controlfile autobackup format for device type disk to 'D:\environment\oracle';
+configure controlfile autobackup format for device type disk to 'D:/environment/oracle';
 configure default device type to disk;
 crosscheck backup;
 crosscheck archivelog all;
 allocate channel c1 device type disk;
 allocate channel c2 device type disk;
 allocate channel c3 device type disk;
-backup incremental level 0 database format 'D:\environment\oracle\level0_%d_%T_%U.bak';
+backup incremental level 0 database format 'D:/environment/oracle/level0_%d_%T_%U.bak';
 report obsolete;
 delete noprompt obsolete;
 delete noprompt expired backup;
